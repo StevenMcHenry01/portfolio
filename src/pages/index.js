@@ -5,7 +5,7 @@ import { useTheme } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import Box from '@material-ui/core/Box'
-import SEO from '../components/seo'
+import SEO from '../components/SEO'
 
 export default function Index() {
   const theme = useTheme()
