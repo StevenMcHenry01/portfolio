@@ -59,13 +59,15 @@ const AppWrapper = styled.div`
   }
 `
 const PageWrapper = styled.main`
-  flex: 6;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   background-color: white;
   color: black;
+  @media (max-width: 768px) {
+    align-items: center;
+  }
 `
 
 export default TopLayout

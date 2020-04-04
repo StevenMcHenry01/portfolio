@@ -27,7 +27,6 @@ export default () => {
 }
 
 const FooterStyled = styled.footer`
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
