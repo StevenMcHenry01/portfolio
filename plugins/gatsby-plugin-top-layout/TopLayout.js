@@ -1,10 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import {Paper} from '@material-ui/core'
 import { ThemeProvider } from '@material-ui/core/styles'
-import theme from '../../src/styles/theme'
+import {lightTheme, darkTheme} from '../../src/styles/theme'
 import styled from 'styled-components'
 import GithubCorner from 'react-github-corner'
 import "../../src/styles/standardInject.scss"
@@ -12,6 +12,12 @@ import "../../src/styles/standardInject.scss"
 import Header from "../../src/components/Header"
 
 const TopLayout = ({ children }) => {
+  const [darkThemeActivated, setDarkThemeActivated] = useState(false)
+
+  const handleThemeToggle = () => {
+    setDarkThemeActivated(!darkThemeActivated)
+  }
+
   return (
     <>
       <Helmet>
@@ -24,10 +30,10 @@ const TopLayout = ({ children }) => {
           rel='stylesheet'
         />
       </Helmet>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={darkThemeActivated ? darkTheme : lightTheme}>
         <CssBaseline />
         <AppWrapper>
-          <Header />
+          <Header handleThemeToggle={handleThemeToggle}/>
           <PageWrapper square>{children}</PageWrapper>
         </AppWrapper>
         <GithubCornerStyled

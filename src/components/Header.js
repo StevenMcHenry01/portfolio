@@ -1,14 +1,14 @@
 import { Link } from 'gatsby'
-import React from 'react'
+import React, { useState, useRef, useLayoutEffect } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled, { keyframes } from 'styled-components'
-import { useTheme } from '@material-ui/core/styles'
+import { useTheme, Switch, withStyles } from '@material-ui/core'
 import NavModal from './NavModal'
 
 import Footer from './Footer'
 
-const Header = () => {
+const Header = ({ handleThemeToggle }) => {
   const data = useStaticQuery(graphql`
     query {
       logo: file(relativePath: { eq: "logo.png" }) {
@@ -20,6 +20,14 @@ const Header = () => {
       }
     }
   `)
+
+  const [switched, setSwitched] = useState(true)
+  const [hasAnimated, setHasAnimated] = useState(false)
+
+  const handleSwitch = () => {
+    setSwitched(!switched)
+    handleThemeToggle()
+  }
 
   const theme = useTheme()
 
@@ -37,7 +45,7 @@ const Header = () => {
   `
 
   const HeaderStyled = styled.header`
-    background-color: ${theme.palette.grey[100]};
+    background-color: ${theme.palette.header.background};
     padding: 2rem;
     height: 100vh;
     width: 17rem;
@@ -46,7 +54,7 @@ const Header = () => {
     justify-content: space-between;
     align-items: flex-start;
 
-    animation: ${moveInLeft} 0.8s ease-out;
+    animation: ${!hasAnimated ? moveInLeft : 'none'} 0.8s ease-out;
 
     @media (max-width: 768px) {
       flex: none;
@@ -107,7 +115,7 @@ const Header = () => {
 
   const MainLogoStyledDiv = styled.div`
     @media (max-width: 768px) {
-      width: 50px;
+      min-width: 50px;
       height: 50px;
       flex: none;
     }
@@ -119,6 +127,52 @@ const Header = () => {
     }
   `
 
+  const AntSwitch = withStyles((theme) => ({
+    root: {
+      width: 28,
+      height: 16,
+      padding: 0,
+      display: 'flex',
+    },
+    switchBase: {
+      padding: 2,
+      color: theme.palette.grey[500],
+      '&$checked': {
+        transform: 'translateX(12px)',
+        color: theme.palette.common.white,
+        '& + $track': {
+          opacity: 1,
+          backgroundColor: theme.palette.primary.main,
+          borderColor: theme.palette.primary.main,
+        },
+      },
+    },
+    thumb: {
+      width: 12,
+      height: 12,
+      boxShadow: 'none',
+    },
+    track: {
+      border: `1px solid ${theme.palette.grey[500]}`,
+      borderRadius: 16 / 2,
+      opacity: 1,
+      backgroundColor: theme.palette.common.white,
+    },
+    checked: {},
+  }))(Switch)
+
+  const SwitchWrapperDivStyled = styled.div`
+    @media (max-width: 768px) {
+      position: absolute;
+      left: 70px;
+      top: 25px;
+    }
+  `
+
+  setTimeout(() => {
+    setHasAnimated(true)
+  }, 1000)
+
   // ~ COMPONENT
   return (
     <HeaderStyled>
@@ -129,6 +183,9 @@ const Header = () => {
         <HeaderTextStyledp>Web Developer</HeaderTextStyledp>
         <HeaderTextStyledp>Student</HeaderTextStyledp>
         <HeaderTextStyledp>Starcraft Lover</HeaderTextStyledp>
+        <SwitchWrapperDivStyled>
+          <AntSwitch checked={switched} onChange={handleSwitch} name='switch' />
+        </SwitchWrapperDivStyled>
       </MainLogoStyledDiv>
       <NavStyled>
         <NavLinkStyled to='/' activeClassName='activeStyle'>

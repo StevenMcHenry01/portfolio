@@ -3,8 +3,7 @@ import { navigate } from 'gatsby-link'
 import styled from 'styled-components'
 import {
   TextField,
-  Card,
-  CardContent,
+  Button,
   Typography,
   TextareaAutosize,
   useTheme,
@@ -54,8 +53,8 @@ export default function ContactForm() {
       borderColor: theme.palette.grey[400],
       width: '100%',
       padding: '0.5rem',
-      fontSize: '1rem'
-    }
+      fontSize: '1rem',
+    },
   })
   const classes = useStyles()
 
@@ -106,8 +105,9 @@ export default function ContactForm() {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
       />
-
-      <button type='submit'>Send</button>
+      <Button variant='contained' color='primary' type='submit'>
+        Send
+      </Button>
     </form>
   )
 }

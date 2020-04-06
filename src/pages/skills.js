@@ -1,18 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-import Container from '@material-ui/core/Container'
-import Box from '@material-ui/core/Box'
+import {Box, Container, useTheme} from '@material-ui/core'
 import Skills from '../components/Skills'
 import SEO from '../components/SEO'
 
-const StyledPage = styled.div`
+const SkillsPage = () => {
+  const theme = useTheme()
+  const StyledPage = styled.div`
   padding-top: 1rem;
-  background: #191b21;
+  background: ${theme.palette.type === 'dark' ? '#191b21' : '#FFFFFF'};
   width: 100vw;
   height: 100vh;
 `
-
-const SkillsPage = () => (
+  return (
   <StyledPage>
     <SEO title='Skills' />
     <Container>
@@ -21,6 +21,7 @@ const SkillsPage = () => (
       </Box>
     </Container>
   </StyledPage>
-)
+  )
+}
 
 export default SkillsPage
