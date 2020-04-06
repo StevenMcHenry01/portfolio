@@ -20,6 +20,10 @@ export default function Index() {
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    @media (max-width: 768px) {
+      padding: 0 0 0 1.5rem;
+      width: 100%;
+    }
   `
 
   const GlitchSpanStyled = styled.span`

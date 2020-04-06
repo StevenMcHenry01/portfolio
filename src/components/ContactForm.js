@@ -1,5 +1,17 @@
-import React from 'react'
+
+import React, { useState } from 'react'
 import { navigate } from 'gatsby-link'
+import styled from 'styled-components'
+import {
+  TextField,
+  Card,
+  CardContent,
+  Typography,
+  TextareaAutosize,
+  useTheme,
+  makeStyles,
+} from '@material-ui/core'
+
 
 function encode(data) {
   return Object.keys(data)
@@ -8,11 +20,11 @@ function encode(data) {
 }
 
 export default function ContactForm() {
-  const [state, setState] = React.useState({})
 
-  const handleChange = (e) => {
-    setState({ ...state, [e.target.name]: e.target.value })
-  }
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -22,58 +34,89 @@ export default function ContactForm() {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': form.getAttribute('name'),
-        ...state,
+
+        name: name,
+        email: email,
+        message: message,
+
       }),
     })
       .then(() => navigate(form.getAttribute('action')))
       .catch((error) => alert(error))
   }
 
+
+  // STYLING
+  const theme = useTheme()
+  const useStyles = makeStyles({
+    form: {
+      minHeight: '350px',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+    },
+    textArea: {
+      borderRadius: '5px',
+      borderColor: theme.palette.grey[400],
+      width: '100%',
+      padding: '0.5rem',
+      fontSize: '1rem'
+    }
+  })
+  const classes = useStyles()
+
   return (
-    <>
-      <h1>Contact</h1>
-      <form
-        name='contact'
-        method='post'
-        action='/thanks/'
-        data-netlify='true'
-        data-netlify-honeypot='bot-field'
-        onSubmit={handleSubmit}
-      >
-        {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-        <input type='hidden' name='form-name' value='contact' />
-        <p hidden>
-          <label>
-            Don’t fill this out:{' '}
-            <input name='bot-field' onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your name:
-            <br />
-            <input type='text' name='name' onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your email:
-            <br />
-            <input type='email' name='email' onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Message:
-            <br />
-            <textarea name='message' onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <button type='submit'>Send</button>
-        </p>
-      </form>
-    </>
+    <form
+      name='Contact Form'
+      method='post'
+      action='/thanks/'
+      className={classes.form}
+      data-netlify='true'
+      data-netlify-honeypot='bot-field'
+      onSubmit={handleSubmit}
+    >
+      <input type='hidden' name='form-name' value='contact' />
+      <p hidden>
+        <label>
+          Don’t fill this out: <input name='bot-field' />
+        </label>
+      </p>
+      <Typography variant='h3'>Contact</Typography>
+      <TextField
+        required
+        name='name'
+        id='name'
+        label='name'
+        variant='outlined'
+        value={name}
+        size='small'
+        onChange={(e) => setName(e.target.value)}
+      />
+      <TextField
+        required
+        id='email'
+        label='email'
+        name='email'
+        size='small'
+        variant='outlined'
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <TextareaAutosize
+        placeholder='message'
+        id='message'
+        label='message'
+        name='message'
+        rowsMin='4'
+        className={classes.textArea}
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+      />
+
+      <button type='submit'>Send</button>
+    </form>
+
   )
 }
 

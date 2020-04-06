@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import CssBaseline from '@material-ui/core/CssBaseline'
+import {Paper} from '@material-ui/core'
 import { ThemeProvider } from '@material-ui/core/styles'
 import theme from '../../src/styles/theme'
 import styled from 'styled-components'
@@ -27,7 +28,7 @@ const TopLayout = ({ children }) => {
         <CssBaseline />
         <AppWrapper>
           <Header />
-          <PageWrapper>{children}</PageWrapper>
+          <PageWrapper square>{children}</PageWrapper>
         </AppWrapper>
         <GithubCornerStyled
           href='https://github.com/stevenmchenry01'
@@ -58,13 +59,15 @@ const AppWrapper = styled.div`
     flex-direction: column;
   }
 `
-const PageWrapper = styled.main`
+const PageWrapper = styled(Paper)`
   display: flex;
+  height: 100vh;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-color: white;
-  color: black;
+  /* background-color: white; */
+  /* color: black; */
   @media (max-width: 768px) {
     align-items: center;
   }
