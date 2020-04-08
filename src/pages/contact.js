@@ -4,32 +4,40 @@ import styled from 'styled-components'
 
 import ContactForm from '../components/ContactForm'
 import SEO from '../components/SEO'
-import { Paper } from '@material-ui/core'
+import PaperPlane from '../components/Icons/PaperPlane'
 
 const ContactPage = () => {
   // STYLING
-  const CardStyled = styled(Card)`
-    padding: 2rem;
-    max-width: 300px;
-    flex-basis: 230px;
+  const ContactPageStyled = styled.div`
+    padding-left: 5rem;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    @media (max-width: 768px) {
+      padding: 0;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: -10rem;
+    }
   `
 
-  const ContactPageStyled = styled.div`
-    padding-left: 10rem;
+  const PaperPlaneWrapper = styled.div`
+    margin: 0 1rem;
     @media (max-width: 768px) {
-    padding: 0;
-  }
+      display: none;
+    }
   `
   return (
     <>
       <SEO title='contact' />
-      <Container>
+
         <ContactPageStyled>
-          <CardStyled>
-            <ContactForm />
-          </CardStyled>
+          <ContactForm />
+          <PaperPlaneWrapper>
+            <PaperPlane />
+          </PaperPlaneWrapper>
         </ContactPageStyled>
-      </Container>
+
     </>
   )
 }

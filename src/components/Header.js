@@ -47,7 +47,7 @@ const Header = ({ handleThemeToggle }) => {
   const HeaderStyled = styled.header`
     background-color: ${theme.palette.header.background};
     padding: 2rem;
-    height: 100vh;
+    min-height: 100vh;
     width: 17rem;
     display: flex;
     flex-direction: column;
@@ -60,6 +60,7 @@ const Header = ({ handleThemeToggle }) => {
       flex: none;
       flex-direction: row;
       padding: 10px;
+      min-height: 0;
       height: 60px;
       width: 100%;
       animation: none;
@@ -162,7 +163,10 @@ const Header = ({ handleThemeToggle }) => {
   }))(Switch)
 
   const SwitchWrapperDivStyled = styled.div`
+    margin-top: 1rem;
     @media (max-width: 768px) {
+      display: flex;
+      margin-top: 0;
       position: absolute;
       left: 70px;
       top: 25px;
@@ -185,22 +189,23 @@ const Header = ({ handleThemeToggle }) => {
         <HeaderTextStyledp>Starcraft Lover</HeaderTextStyledp>
         <SwitchWrapperDivStyled>
           <AntSwitch checked={switched} onChange={handleSwitch} name='switch' />
+          <HeaderTextStyledp>{theme.palette.type === 'dark' ? 'Dark Mode' : 'Light Mode'}</HeaderTextStyledp>
         </SwitchWrapperDivStyled>
       </MainLogoStyledDiv>
       <NavStyled>
         <NavLinkStyled to='/' activeClassName='activeStyle'>
           Home
         </NavLinkStyled>
-        <NavLinkStyled to='skills' activeClassName='activeStyle'>
+        <NavLinkStyled to='/skills' activeClassName='activeStyle'>
           Skills
         </NavLinkStyled>
-        <NavLinkStyled to='portfolio' activeClassName='activeStyle'>
+        <NavLinkStyled to='/portfolio' activeClassName='activeStyle'>
           Portfolio
         </NavLinkStyled>
-        <NavLinkStyled to='thoughts' activeClassName='activeStyle'>
+        <NavLinkStyled to='/thoughts' activeClassName='activeStyle'>
           Thoughts
         </NavLinkStyled>
-        <NavLinkStyled to='contact' activeClassName='activeStyle'>
+        <NavLinkStyled to='/contact' activeClassName='activeStyle'>
           Contact
         </NavLinkStyled>
       </NavStyled>

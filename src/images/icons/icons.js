@@ -34,9 +34,9 @@ const CloseSquareO = props => (
 )
 
 const CheckSquareO = props => (
-  <svg {...props} xmlspace="preserve"  width="512px" height="512px" viewBox="0 0 459 459">
+  <svg {...props} xmlSpace="preserve"  width="512px" height="512px" viewBox="0 0 459 459">
     <g id="check-box">
-		<path d="M408,0H51C22.95,0,0,22.95,0,51v357c0,28.05,22.95,51,51,51h357c28.05,0,51-22.95,51-51V51C459,22.95,436.05,0,408,0z     M178.5,357L51,229.5l35.7-35.7l91.8,91.8L372.3,91.8l35.7,35.7L178.5,357z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#027831"/>
+		<path d="M408,0H51C22.95,0,0,22.95,0,51v357c0,28.05,22.95,51,51,51h357c28.05,0,51-22.95,51-51V51C459,22.95,436.05,0,408,0z     M178.5,357L51,229.5l35.7-35.7l91.8,91.8L372.3,91.8l35.7,35.7L178.5,357z" data-original="#000000" className="active-path" data-old_color="#000000" fill="#027831"/>
 	</g>
   </svg>
 )

@@ -128,28 +128,28 @@ export default function NavModal() {
           </NavLinkStyled>
           <NavLinkStyled
             onClick={handleClose}
-            to='skills'
+            to='/skills'
             activeClassName='activeStyle'
           >
             Skills
           </NavLinkStyled>
           <NavLinkStyled
             onClick={handleClose}
-            to='portfolio'
+            to='/portfolio'
             activeClassName='activeStyle'
           >
             Portfolio
           </NavLinkStyled>
           <NavLinkStyled
             onClick={handleClose}
-            to='thoughts'
+            to='/thoughts'
             activeClassName='activeStyle'
           >
             Thoughts
           </NavLinkStyled>
           <NavLinkStyled
             onClick={handleClose}
-            to='contact'
+            to='/contact'
             activeClassName='activeStyle'
           >
             Contact

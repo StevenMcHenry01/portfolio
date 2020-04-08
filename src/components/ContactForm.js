@@ -45,13 +45,19 @@ export default function ContactForm() {
       minHeight: '350px',
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center',
+      alignItems: 'flex-start',
       justifyContent: 'space-between',
     },
     textArea: {
+      color: theme.palette.type === 'dark' ? 'white' : theme.palette.common.black,
       borderRadius: '5px',
       borderColor: theme.palette.grey[400],
-      width: '100%',
+      background: 'none',
+      outline: 'blue',
+      resize: 'none',
+      border: `1px solid ${theme.palette.common.white}`,
+      minWidth: '15rem',
+      margin: `1.5rem 0`,
       padding: '0.5rem',
       fontSize: '1rem',
     },
@@ -74,13 +80,12 @@ export default function ContactForm() {
           Don’t fill this out: <input name='bot-field' />
         </label>
       </p>
-      <Typography variant='h3'>Contact</Typography>
+      <Typography variant='h3' color='primary'>Contact</Typography>
       <TextField
         required
         name='name'
         id='name'
         label='name'
-        variant='outlined'
         value={name}
         size='small'
         onChange={(e) => setName(e.target.value)}
@@ -91,7 +96,6 @@ export default function ContactForm() {
         label='email'
         name='email'
         size='small'
-        variant='outlined'
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
@@ -100,7 +104,7 @@ export default function ContactForm() {
         id='message'
         label='message'
         name='message'
-        rowsMin='4'
+        rowsMin='7'
         className={classes.textArea}
         value={message}
         onChange={(e) => setMessage(e.target.value)}

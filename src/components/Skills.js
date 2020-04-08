@@ -58,6 +58,7 @@ const Tree = memo(({ children, name, style, defaultOpen = false }) => {
         style={{
           opacity,
           height: isOpen && previous === isOpen ? 'auto' : height,
+          borderLeft: theme.palette.type === 'dark' ? `1px dashed rgba(255, 255, 255, 0.4)` : `1px dashed ${theme.palette.common.black}`
         }}
       >
         <a.div style={{ transform }} {...bind} children={children} />
@@ -69,7 +70,7 @@ const Tree = memo(({ children, name, style, defaultOpen = false }) => {
 const SkillsTree = () => {
   const theme = useTheme()
   const PageStyle = styled('div')`
-    width: 100%;
+    max-width: 30rem;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -177,7 +178,6 @@ const Content = styled(animated.div)`
   will-change: transform, opacity, height;
   margin-left: 6px;
   padding: 0px 0px 0px 14px;
-  border-left: 1px dashed rgba(255, 255, 255, 0.4);
   overflow: hidden;
 `
 

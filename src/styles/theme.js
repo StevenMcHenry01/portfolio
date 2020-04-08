@@ -37,7 +37,7 @@ export const darkTheme = createMuiTheme({
     },
     MuiCard: {
       root: {
-        backgroundColor: '#616161'
+        backgroundColor: '#696969'
       }
     }
   }
