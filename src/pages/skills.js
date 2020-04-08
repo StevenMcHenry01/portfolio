@@ -1,26 +1,42 @@
 import React from 'react'
 import styled from 'styled-components'
-import Container from '@material-ui/core/Container'
-import Box from '@material-ui/core/Box'
+import { Box, Container, useTheme } from '@material-ui/core'
 import Skills from '../components/Skills'
 import SEO from '../components/SEO'
+import SkillsAnimation from '../components/Icons/SkillsAnimation'
 
-const StyledPage = styled.div`
-  padding-top: 1rem;
-  background: #191b21;
-  width: 100vw;
-  height: 100vh;
-`
+const SkillsPage = () => {
+  const theme = useTheme()
+  const StyledPage = styled.div`
+    padding-top: 1rem;
+    background: ${theme.palette.type === 'dark' ? '#191b21' : '#FFFFFF'};
+    width: 100%;
+    min-height: 100vh;
+  `
+  const ContainerStyled = styled(Container)`
+  display: flex;
+  margin-left: 0;
+  
+  `
 
-const SkillsPage = () => (
-  <StyledPage>
-    <SEO title='Skills' />
-    <Container>
-      <Box>
+  const SkillsAnimationWrapper = styled.div`
+  @media (max-width: 768px) {
+      display: none;
+    }
+  
+  `
+  return (
+    <StyledPage>
+      <SEO title='Skills' />
+      <ContainerStyled maxWidth='lg'>
         <Skills />
-      </Box>
-    </Container>
-  </StyledPage>
-)
+        <SkillsAnimationWrapper>
+
+        <SkillsAnimation />
+        </SkillsAnimationWrapper>
+      </ContainerStyled>
+    </StyledPage>
+  )
+}
 
 export default SkillsPage
