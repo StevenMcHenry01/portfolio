@@ -13,7 +13,7 @@ export default () => {
     font-weight: 500;
     letter-spacing: 0.08em;
     line-height: 1.4em;
-    color: ${theme.palette.grey[600]};
+    color: ${theme.palette.header.textColor};
   `
 
   return (

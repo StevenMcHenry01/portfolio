@@ -66,15 +66,8 @@ const AppWrapper = styled.div`
   }
 `
 const PageWrapper = styled(Paper)`
-  /* display: flex; */
   min-height: 100vh;
   width: 100%;
-  /* flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  @media (max-width: 768px) {
-    align-items: center;
-  } */
 `
 
 export default TopLayout

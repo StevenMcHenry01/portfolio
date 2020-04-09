@@ -1,15 +1,75 @@
 // 3rd party imports
 import React from 'react'
+import styled from 'styled-components'
+import { Typography, useTheme, Divider, Button, Link } from '@material-ui/core'
+import DeleteIcon from '@material-ui/icons/Delete'
+import { workArray } from '../data/workArray'
 
 // My imports
-
+import WorkCard from '../components/WorkCard'
 
 const PortfolioPage = () => {
+  const theme = useTheme()
+  // STYLING
+  const PageWrapper = styled.div`
+    height: 100%;
+    width: 100%;
+    padding: 10rem 0 0 5rem;
+    max-width: 1200px;
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 5rem 0;
+      text-align: center;
+    }
+  `
+
+  const WorkCardWrapper = styled.div`
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, max-content));
+    row-gap: 20px;
+    column-gap: 30px;
+  `
+
+  const WorkCardStyled = styled(WorkCard)`
+    width: 350px;
+    margin: 0 auto;
+  `
+
   return (
-    <div>Port</div>
+    <PageWrapper>
+      <Typography variant='h3'>Selected Work</Typography>
+
+      <Typography gutterBottom variant='h6'>
+        The rest of my work can be found at my{' '}
+        <Link
+          href='https://github.com/StevenMcHenry01'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <Button variant='contained' color='primary' endIcon={<DeleteIcon />}>
+            github account
+          </Button>
+        </Link>
+      </Typography>
+      <Divider style={{ width: '19.5rem' }} />
+      <WorkCardWrapper>
+        {workArray.map((work, index) => {
+          return (
+            <WorkCardStyled
+              imgUrl={work.image}
+              title={work.title}
+              description={work.description}
+              key={index}
+            />
+          )
+        })}
+      </WorkCardWrapper>
+    </PageWrapper>
   )
 }
 
 export default PortfolioPage
-
-// STYLING
