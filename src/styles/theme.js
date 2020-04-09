@@ -29,6 +29,9 @@ export const darkTheme = createMuiTheme({
     background: {
       default: '#696969',
     },
+    card: {
+      chipBackground: '#D3D3D3'
+    }
   },
   overrides: {
     MuiPaper: {
@@ -71,5 +74,8 @@ export const lightTheme = createMuiTheme({
     background: {
       default: '#f5f5f5',
     },
+    card: {
+      chipBackground: '#D3D3D3'
+    }
   },
 });

@@ -2,7 +2,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Typography, useTheme, Divider, Button, Link } from '@material-ui/core'
-import DeleteIcon from '@material-ui/icons/Delete'
+import GitHubIcon from '@material-ui/icons/GitHub';
 import { workArray } from '../data/workArray'
 
 // My imports
@@ -42,15 +42,14 @@ const PortfolioPage = () => {
   return (
     <PageWrapper>
       <Typography variant='h3'>Selected Work</Typography>
-
-      <Typography gutterBottom variant='h6'>
+      <Typography gutterBottom variant='h6' style={{margin: '1rem 0'}}>
         The rest of my work can be found at my{' '}
         <Link
           href='https://github.com/StevenMcHenry01'
           target='_blank'
           rel='noopener noreferrer'
         >
-          <Button variant='contained' color='primary' endIcon={<DeleteIcon />}>
+          <Button variant='contained' color='primary' endIcon={<GitHubIcon />}>
             github account
           </Button>
         </Link>
@@ -60,9 +59,12 @@ const PortfolioPage = () => {
         {workArray.map((work, index) => {
           return (
             <WorkCardStyled
-              imgUrl={work.image}
+              image={work.image}
               title={work.title}
               description={work.description}
+              githubUrl={work.githubUrl}
+              siteUrl={work.siteUrl}
+              chipArray={work.chipArray}
               key={index}
             />
           )
