@@ -1,19 +1,15 @@
 import React from 'react'
-import Container from '@material-ui/core/Container'
 import styled from 'styled-components'
 import { useTheme } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-import Box from '@material-ui/core/Box'
 import SEO from '../components/SEO'
-import Squiggle from '../components/Icons/Squiggle'
 import { Link } from 'gatsby'
 
-export default function Index() {
+const Index = () => {
   const theme = useTheme()
 
   // STYLING
-
   const PageWrapper = styled.div`
     max-width: 1200px;
     height: 100vh;
@@ -104,12 +100,12 @@ export default function Index() {
             </Typography>
           </div>
           <div>
-            <Link to='/portfolio'>
+            <Link to='/portfolio' style={{ textDecoration: 'none' }}>
               <StyledButton variant='outlined' color='secondary'>
                 Work
               </StyledButton>
             </Link>
-            <Link to='/contact'>
+            <Link to='/contact' style={{ textDecoration: 'none' }}>
               <StyledButton variant='outlined' color='secondary'>
                 Contact
               </StyledButton>
@@ -120,3 +116,5 @@ export default function Index() {
     </>
   )
 }
+
+export default Index

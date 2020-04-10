@@ -2,8 +2,9 @@ import React from 'react'
 
 import bobsImage from '../images/work/bobsBurgersImg.png'
 import starcraftLadderImage from '../images/work/starcraftLadder.png'
+import locationsImage from '../images/work/locations.png'
 
-import { FaReact, FaNode, FaFire} from 'react-icons/fa';
+import { FaReact, FaNode, FaFire, FaSitemap} from 'react-icons/fa';
 
 export const workArray = [
   {
@@ -27,6 +28,18 @@ export const workArray = [
     chipArray: [
       { key: 0, label: 'React', icon: <FaReact /> },
       { key: 1, label: 'Node', icon: <FaNode /> }
+    ]
+  },
+  {
+    title: `Locations App`,
+    description: `React application featuring full auth from scratch, image upload, email password retrieval, and utilizes the google maps API.`,
+    image: locationsImage,
+    githubUrl: 'https://github.com/StevenMcHenry01/locations',
+    siteUrl: 'https://locations-app.netlify.com/',
+    chipArray: [
+      { key: 0, label: 'React', icon: <FaReact /> },
+      { key: 1, label: 'Node', icon: <FaNode /> },
+      { key: 2, label: 'Express', icon: <FaSitemap /> },
     ]
   },
 ]
