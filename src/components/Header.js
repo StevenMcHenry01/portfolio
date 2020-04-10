@@ -47,7 +47,7 @@ const Header = ({ handleThemeToggle }) => {
   const HeaderStyled = styled.header`
     background-color: ${theme.palette.header.background};
     padding: 2rem;
-    min-height: 100vh;
+    height: 100vh;
     width: 17rem;
     display: flex;
     flex-direction: column;
@@ -108,7 +108,7 @@ const Header = ({ handleThemeToggle }) => {
     font-weight: 500;
     letter-spacing: 0.08em;
     line-height: 0.5rem;
-    color: ${theme.palette.grey[600]};
+    color: ${theme.palette.header.textColor};
     @media (max-width: 768px) {
       display: none;
     }

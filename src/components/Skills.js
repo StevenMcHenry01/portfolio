@@ -150,7 +150,7 @@ const SkillsTree = () => {
         </Tree>
         <Tree name='OOP'>
           <Tree name='Java'></Tree>
-          <Tree name='CSS'></Tree>
+          <Tree name='C++'></Tree>
         </Tree>
       </Tree>
     </PageStyle>

@@ -14,7 +14,8 @@ export const darkTheme = createMuiTheme({
       main: '#27AAE1'
     },
     header: {
-      background: '#e0e0e0',
+      background: '#696969',
+      textColor: '#f5f5f5'
     },
     secondary: {
       main: '#f0544f',
@@ -26,8 +27,11 @@ export const darkTheme = createMuiTheme({
       main: red.A400,
     },
     background: {
-      default: '#fff',
+      default: '#696969',
     },
+    card: {
+      chipBackground: '#D3D3D3'
+    }
   },
   overrides: {
     MuiPaper: {
@@ -56,6 +60,7 @@ export const lightTheme = createMuiTheme({
     },
     header: {
       background: '#f5f5f5',
+      textColor: '#696969'
     },
     secondary: {
       main: '#f0544f',
@@ -67,7 +72,10 @@ export const lightTheme = createMuiTheme({
       main: red.A400,
     },
     background: {
-      default: '#fff',
+      default: '#f5f5f5',
     },
+    card: {
+      chipBackground: '#D3D3D3'
+    }
   },
 });
