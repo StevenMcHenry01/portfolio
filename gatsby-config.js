@@ -1,5 +1,12 @@
 module.exports = {
   plugins: [
+    {
+      resolve: 'gatsby-plugin-load-script',
+      options: {
+        src: './three.r95.min.js',
+      },
+    },
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-top-layout',
     {
       resolve: 'gatsby-plugin-material-ui',
@@ -11,18 +18,11 @@ module.exports = {
     },
     'gatsby-plugin-styled-components',
     'gatsby-plugin-sass',
-    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-load-script',
-      options: {
-        src: 'https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.module.js',
       },
     },
     `gatsby-transformer-sharp`,
