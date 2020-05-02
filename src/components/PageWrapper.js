@@ -1,6 +1,7 @@
 // 3rd party imports
 import React, {useState, useRef, useEffect} from 'react'
-import RINGS from 'vanta/dist/vanta.rings.min'
+import * as THREE from 'three'
+import RINGS from '../data/vanta.rings.min'
 import styled from 'styled-components'
 // My imports
 
@@ -11,14 +12,14 @@ const PageWrapper = ({vantaEffect, setVantaEffect, darkThemeActivated, children}
   const myRef = useRef(null)
 
   useEffect(() => {
-    setTimeout(()=>{return}, 500)
     if (!vantaEffect && !darkThemeActivated) {
       setVantaEffect(RINGS({
         el: myRef.current,
         color: '#27AAE1',
         scale: 2.00,
         scaleMobile: 3.00,
-        backgroundColor: '#f5f5f5'
+        backgroundColor: '#f5f5f5',
+        THREE: THREE
       }))
     }
     if (!vantaEffect && darkThemeActivated) {
@@ -27,7 +28,8 @@ const PageWrapper = ({vantaEffect, setVantaEffect, darkThemeActivated, children}
         color: '#27AAE1',
         scale: 2.00,
         scaleMobile: 3.00,
-        backgroundColor: '#191b21'
+        backgroundColor: '#191b21',
+        THREE: THREE
       }))
     }
     return () => {
