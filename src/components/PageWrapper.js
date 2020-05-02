@@ -11,6 +11,7 @@ const PageWrapper = ({vantaEffect, setVantaEffect, darkThemeActivated, children}
   const myRef = useRef(null)
 
   useEffect(() => {
+    setTimeout(()=>{return}, 500)
     if (!vantaEffect && !darkThemeActivated) {
       setVantaEffect(RINGS({
         el: myRef.current,
