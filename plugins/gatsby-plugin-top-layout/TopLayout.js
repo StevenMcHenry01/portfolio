@@ -60,6 +60,7 @@ const TopLayout = ({ children }) => {
           href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap'
           rel='stylesheet'
         />
+        <script src="three.r95.min.js"></script>
       </Helmet>
       <ThemeProvider theme={darkThemeActivated ? darkTheme : lightTheme}>
         <CssBaseline />
@@ -72,7 +73,7 @@ const TopLayout = ({ children }) => {
           target='_blank'
         />
       </ThemeProvider>
-    </>
+    </script>
   )
 }
 
