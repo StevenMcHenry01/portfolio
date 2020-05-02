@@ -1,9 +1,10 @@
 // 3rd party imports
-import React, {useState, useRef, useEffect} from 'react'
+import React, {useRef, useEffect} from 'react'
 import * as THREE from 'three'
-import RINGS from '../data/vanta.rings.min'
 import styled from 'styled-components'
+
 // My imports
+import RINGS from '../data/vanta.rings.min'
 
 
 const PageWrapper = ({vantaEffect, setVantaEffect, darkThemeActivated, children}) => {
