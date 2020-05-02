@@ -1,48 +1,23 @@
-import React, {useState,useEffect, useRef} from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { ThemeProvider } from '@material-ui/core/styles'
-import {lightTheme, darkTheme} from '../../src/styles/theme'
+import { lightTheme, darkTheme } from '../../src/styles/theme'
 import styled from 'styled-components'
 import GithubCorner from 'react-github-corner'
-import "../../src/styles/standardInject.scss"
-import RINGS from 'vanta/dist/vanta.rings.min'
+import '../../src/styles/standardInject.scss'
 
-import Header from "../../src/components/Header"
+import PageWrapper from '../../src/components/PageWrapper'
+
+import Header from '../../src/components/Header'
 
 const TopLayout = ({ children }) => {
+  const [vantaEffect, setVantaEffect] = useState(0)
   const [darkThemeActivated, setDarkThemeActivated] = useState(false)
 
-  const [vantaEffect, setVantaEffect] = useState(0)
-  const myRef = useRef(null)
-
-  useEffect(() => {
-    if (!vantaEffect && !darkThemeActivated) {
-      setVantaEffect(RINGS({
-        el: myRef.current,
-        color: '#27AAE1',
-        scale: 2.00,
-        scaleMobile: 3.00,
-        backgroundColor: '#f5f5f5'
-      }))
-    }
-    if (!vantaEffect && darkThemeActivated) {
-      setVantaEffect(RINGS({
-        el: myRef.current,
-        color: '#27AAE1',
-        scale: 2.00,
-        scaleMobile: 3.00,
-        backgroundColor: '#191b21'
-      }))
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy()
-    }
-  }, [vantaEffect])
-
   const handleThemeToggle = () => {
-    if(vantaEffect) {
+    if (vantaEffect) {
       vantaEffect.destroy()
       setVantaEffect(0)
     }
@@ -64,8 +39,14 @@ const TopLayout = ({ children }) => {
       <ThemeProvider theme={darkThemeActivated ? darkTheme : lightTheme}>
         <CssBaseline />
         <AppWrapper>
-          <Header handleThemeToggle={handleThemeToggle}/>
-          <PageWrapper ref={myRef}>{children}</PageWrapper>
+          <Header handleThemeToggle={handleThemeToggle} />
+          <PageWrapper
+            vantaEffect={vantaEffect}
+            setVantaEffect={setVantaEffect}
+            darkThemeActivated={darkThemeActivated}
+          >
+            {children}
+          </PageWrapper>
         </AppWrapper>
         <GithubCornerStyled
           href='https://github.com/stevenmchenry01'
@@ -95,10 +76,6 @@ const AppWrapper = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
   }
-`
-const PageWrapper = styled.div`
-  min-height: 100vh;
-  width: 100%;
 `
 
 export default TopLayout
