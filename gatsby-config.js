@@ -22,7 +22,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-load-script',
       options: {
-        src: '/three.r95.min.js',
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.module.js',
       },
     },
     `gatsby-transformer-sharp`,
