@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 import ContactForm from '../components/ContactForm'
 import SEO from '../components/SEO'
-import PaperPlane from '../components/Icons/PaperPlane'
 
 const ContactPage = () => {
   // STYLING
@@ -20,22 +19,15 @@ const ContactPage = () => {
       margin-top: -10rem;
     }
   `
-
-  const PaperPlaneWrapper = styled.div`
-    margin: 0 1rem;
-    @media (max-width: 768px) {
-      display: none;
-    }
-  `
   return (
     <>
       <SEO title='contact' />
 
         <ContactPageStyled>
+        <Card style={{padding: '3rem'}}>
+
           <ContactForm />
-          <PaperPlaneWrapper>
-            <PaperPlane />
-          </PaperPlaneWrapper>
+        </Card>
         </ContactPageStyled>
 
     </>

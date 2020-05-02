@@ -840,6 +840,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.9.2":
+  version "7.9.6"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.6.tgz#a9102eb5cadedf3f31d08a9ecf294af7827ea29f"
+  integrity sha512-64AF1xY3OAkFHqOb9s4jpgk1Mm5vDZ4L3acHvAml+53nO1XbXLuDodsVpO4OIUsmemlUHMxNdYMNJmsvOwLrvQ==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/template@^7.8.3", "@babel/template@^7.8.6":
   version "7.8.6"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.8.6.tgz#86b22af15f828dfb086474f964dcc3e39c43ce2b"
@@ -5647,6 +5654,13 @@ gatsby-plugin-layout@^1.1.8:
   integrity sha512-ZvwCXqyDj+KD4zS1fbJ1vb+fGz4SN+4MSgSCGaxp3bWmYqjkHTc06KfkHGcjPW7xJY7n1md9jJ6+FbDNeYzcFw==
   dependencies:
     "@babel/runtime" "^7.8.7"
+
+gatsby-plugin-load-script@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-load-script/-/gatsby-plugin-load-script-1.1.0.tgz#b73dc8248ad0e3565d3f848bfd1ecd64f2b7aad2"
+  integrity sha512-EoXUtWX4aBO4zD61xMHIIlQti4FNYmH0KgBkhac+kNMLI64cjzLc0iD7zPrFnzjYR454XAN/GJBa7M7N/VYSpw==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
 
 gatsby-plugin-manifest@^2.2.16:
   version "2.3.3"
@@ -12692,6 +12706,11 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
+
+vanta@^0.5.15:
+  version "0.5.15"
+  resolved "https://registry.yarnpkg.com/vanta/-/vanta-0.5.15.tgz#459e68645e7ac8e0c7727ff47a1a7ba058da53c7"
+  integrity sha512-qmuHk/evT8OQNAYWzVSK6OsapYZ+0EGqZcLeJhETmYGu3NtGNYxHqbIWKOtgUesKKUuopOMtaiPKDE+U8xRKUQ==
 
 vary@^1, vary@~1.1.2:
   version "1.1.2"

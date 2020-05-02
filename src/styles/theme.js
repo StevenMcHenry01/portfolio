@@ -27,10 +27,11 @@ export const darkTheme = createMuiTheme({
       main: red.A400,
     },
     background: {
-      default: '#696969',
+      default: '#696969'
     },
     card: {
-      chipBackground: '#D3D3D3'
+      chipBackground: '#D3D3D3',
+      background: '#191b21'
     }
   },
   overrides: {
@@ -59,7 +60,7 @@ export const lightTheme = createMuiTheme({
       main: '#27AAE1'
     },
     header: {
-      background: '#f5f5f5',
+      background: '#dbdbdb',
       textColor: '#696969'
     },
     secondary: {
@@ -75,7 +76,8 @@ export const lightTheme = createMuiTheme({
       default: '#f5f5f5',
     },
     card: {
-      chipBackground: '#D3D3D3'
+      chipBackground: '#D3D3D3',
+      background: '#f5f5f5'
     }
   },
 });

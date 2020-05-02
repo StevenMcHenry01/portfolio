@@ -45,6 +45,7 @@ const Header = ({ handleThemeToggle }) => {
   `
 
   const HeaderStyled = styled.header`
+  z-index: 99;
     background-color: ${theme.palette.header.background};
     padding: 2rem;
     height: 100vh;
