@@ -73,7 +73,7 @@ const TopLayout = ({ children }) => {
           target='_blank'
         />
       </ThemeProvider>
-    </script>
+    </>
   )
 }
 
