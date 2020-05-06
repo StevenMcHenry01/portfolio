@@ -27,7 +27,7 @@ const WorkCard = ({ image, title, description, githubUrl, siteUrl, chipArray }) 
 
   return (
     <Card className={classes.root}>
-      <CardActionArea>
+      <CardActionArea disabled={true}>
         <CardMedia
           component='img'
           alt='Work Example Photo'
@@ -39,7 +39,7 @@ const WorkCard = ({ image, title, description, githubUrl, siteUrl, chipArray }) 
           <Typography gutterBottom variant='h5' component='h2'>
             {title || 'no title provided'}
           </Typography>
-          <Typography variant='body2' color='textSecondary' component='p'>
+          <Typography style={{height: '2rem', margin: '1rem 0'}} variant='body2' color='textSecondary' component='p'>
             {description || 'no description provided'}
           </Typography>
         </CardContent>

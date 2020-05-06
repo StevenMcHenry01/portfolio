@@ -58,7 +58,10 @@ const Tree = memo(({ children, name, style, defaultOpen = false }) => {
         style={{
           opacity,
           height: isOpen && previous === isOpen ? 'auto' : height,
-          borderLeft: theme.palette.type === 'dark' ? `1px dashed rgba(255, 255, 255, 0.4)` : `1px dashed ${theme.palette.common.black}`
+          borderLeft:
+            theme.palette.type === 'dark'
+              ? `1px dashed rgba(255, 255, 255, 0.4)`
+              : `1px dashed ${theme.palette.common.black}`,
         }}
       >
         <a.div style={{ transform }} {...bind} children={children} />
@@ -74,7 +77,7 @@ const SkillsTree = () => {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: ${theme.palette.type === 'dark' ? '#191b21' : '#FFFFFF'};
+    background: ${theme.palette.card.background};
     overflow: hidden;
     font-size: 20px;
     line-height: 28px;
@@ -101,12 +104,17 @@ const SkillsTree = () => {
               <Tree name='Scss' />
               <Tree name='Styled-components' />
               <Tree name='Bootstrap' />
+              <Tree name='Material-UI' />
+              <Tree name='Themeing' />
             </Tree>
             <Tree name='JavaScript'>
               <Tree name='React'>
                 <Tree name='Hooks' />
+                <Tree name='ContextAPI' />
                 <Tree name='GatsbyJs' />
                 <Tree name='NextJs' />
+                <Tree name='Redux' />
+                <Tree name='Apollo-Client' />
               </Tree>
               <Tree name='Angular' />
               <Tree name='Es6+' />
@@ -135,6 +143,9 @@ const SkillsTree = () => {
               <Tree name='Postgresql' />
               <Tree name='GraphQl' />
               <Tree name='AWS Rds' />
+              <Tree name='MongoDB'>
+                <Tree name='Mongoose' />
+              </Tree>
             </Tree>
           </Tree>
           <Tree name='Testing'>
@@ -146,10 +157,14 @@ const SkillsTree = () => {
         <Tree name='Tooling'>
           <Tree name='Git' />
           <Tree name='Webpack' />
+          <Tree name='SSH' />
+          <Tree name='HTTPS Certification' />
           <Tree name='Terminal Proficiency' />
         </Tree>
         <Tree name='OOP'>
-          <Tree name='Java'></Tree>
+          <Tree name='Java'>
+            <Tree name='REST API' />
+          </Tree>
           <Tree name='C++'></Tree>
         </Tree>
       </Tree>

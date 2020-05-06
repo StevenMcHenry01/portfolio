@@ -90,7 +90,7 @@ const Header = ({ handleThemeToggle }) => {
     line-height: 1.2rem;
     text-align: center;
     text-transform: uppercase;
-    color: ${theme.palette.grey[400]};
+    color: ${theme.palette.grey[500]};
     text-decoration: none;
     border-style: solid;
     border-width: 0px 0px 2px;

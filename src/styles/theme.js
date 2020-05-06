@@ -31,7 +31,7 @@ export const darkTheme = createMuiTheme({
     },
     card: {
       chipBackground: '#D3D3D3',
-      background: '#191b21'
+      background: '#1f2128'
     }
   },
   overrides: {
@@ -77,7 +77,7 @@ export const lightTheme = createMuiTheme({
     },
     card: {
       chipBackground: '#D3D3D3',
-      background: '#f5f5f5'
+      background: '#FFFFFF'
     }
   },
 });
