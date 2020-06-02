@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react'
 import { navigate } from 'gatsby-link'
 import styled from 'styled-components'
@@ -11,7 +10,6 @@ import {
   makeStyles,
 } from '@material-ui/core'
 
-
 function encode(data) {
   return Object.keys(data)
     .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
@@ -19,11 +17,9 @@ function encode(data) {
 }
 
 export default function ContactForm() {
-
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -37,13 +33,11 @@ export default function ContactForm() {
         name: name,
         email: email,
         message: message,
-
       }),
     })
       .then(() => navigate(form.getAttribute('action')))
       .catch((error) => alert(error))
   }
-
 
   // STYLING
   const theme = useTheme()
@@ -56,7 +50,12 @@ export default function ContactForm() {
       justifyContent: 'space-between',
     },
     textArea: {
-      color: theme.palette.type === 'dark' ? 'white' : theme.palette.common.black,
+      '&::placeholder': {
+        color: theme.palette.switchable.textAreaPlaceholder,
+        fontSize: '.8rem',
+        fontFamily: 'Roboto'
+      },
+      color: theme.palette.switchable.textArea,
       borderRadius: '5px',
       borderColor: theme.palette.grey[400],
       background: 'none',
@@ -66,7 +65,7 @@ export default function ContactForm() {
       minWidth: '15rem',
       margin: `1.5rem 0`,
       padding: '0.5rem',
-      fontSize: '1rem',
+      fontSize: '1.2rem',
     },
   })
   const classes = useStyles()
@@ -87,7 +86,9 @@ export default function ContactForm() {
           Don’t fill this out: <input name='bot-field' />
         </label>
       </p>
-      <Typography variant='h3' color='primary'>Contact</Typography>
+      <Typography variant='h3' color='primary'>
+        Contact
+      </Typography>
       <TextField
         required
         name='name'
@@ -120,7 +121,6 @@ export default function ContactForm() {
         Send
       </Button>
     </form>
-
   )
 }
 

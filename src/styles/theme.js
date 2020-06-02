@@ -1,4 +1,4 @@
-import { red } from '@material-ui/core/colors';
+import { red, grey } from '@material-ui/core/colors';
 import { createMuiTheme } from '@material-ui/core/styles';
 
 // A custom theme for this app
@@ -34,7 +34,9 @@ export const darkTheme = createMuiTheme({
       background: '#1f2128'
     },
     switchable: {
-      skillsBackground: '#1f2128'
+      skillsBackground: '#1f2128',
+      textAreaPlaceholder: grey[300],
+      textArea: '#FFFFFF'
     }
   },
   overrides: {
@@ -83,7 +85,9 @@ export const lightTheme = createMuiTheme({
       background: '#FFFFFF'
     },
     switchable: {
-      skillsBackground: '#FFFFFF'
+      skillsBackground: '#FFFFFF',
+      textAreaPlaceholder: grey[600],
+      textArea: '#1c181d'
     }
   },
 });

@@ -82,7 +82,7 @@ export default function NavModal() {
     transition: border-color 0.3s ease 0s, color 0.3s ease 0s;
     border-color: transparent;
     &:hover {
-      color: rgba(0, 0, 0, 0.9) !important;
+      color: ${theme.palette.secondary.main} !important;
       border-color: ${theme.palette.primary.main};
     }
   `
