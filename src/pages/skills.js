@@ -1,12 +1,10 @@
-import React, { Suspense, lazy } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { Card, Box, Container, useTheme } from '@material-ui/core'
-// import Skills from '../components/Skills'
+import Skills from '../components/Skills'
 import SEO from '../components/SEO'
 import { CenteredDiv } from '../styles/CenteredDiv'
 import Loading from '../components/Loading'
-
-const Skills = React.lazy(() => import('../components/Skills'))
 
 const SkillsPage = () => {
   const theme = useTheme()
@@ -24,24 +22,16 @@ const SkillsPage = () => {
     <StyledPage>
       <SEO title='Skills' />
       <ContainerStyled maxWidth='lg'>
-        <Suspense
-          fallback={
-            <CenteredDiv>
-              <Loading />
-            </CenteredDiv>
-          }
-        >
-          <Card>
-            <div
-              style={{
-                backgroundColor: theme.palette.switchable.skillsBackground,
-                padding: '30px',
-              }}
-            >
-              <Skills />
-            </div>
-          </Card>
-        </Suspense>
+        <Card>
+          <div
+            style={{
+              backgroundColor: theme.palette.switchable.skillsBackground,
+              padding: '30px',
+            }}
+          >
+            <Skills />
+          </div>
+        </Card>
       </ContainerStyled>
     </StyledPage>
   )
