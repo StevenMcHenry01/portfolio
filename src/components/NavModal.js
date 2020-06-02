@@ -122,35 +122,35 @@ export default function NavModal() {
           <NavLinkStyled
             onClick={handleClose}
             to='/'
-            activeClassName='activeStyle'
+            activeClassName='mobileActiveStyle'
           >
             Home
           </NavLinkStyled>
           <NavLinkStyled
             onClick={handleClose}
             to='/skills'
-            activeClassName='activeStyle'
+            activeClassName='mobileActiveStyle'
           >
             Skills
           </NavLinkStyled>
           <NavLinkStyled
             onClick={handleClose}
             to='/portfolio'
-            activeClassName='activeStyle'
+            activeClassName='mobileActiveStyle'
           >
             Portfolio
           </NavLinkStyled>
           <NavLinkStyled
             onClick={handleClose}
             to='/thoughts'
-            activeClassName='activeStyle'
+            activeClassName='mobileActiveStyle'
           >
             Thoughts
           </NavLinkStyled>
           <NavLinkStyled
             onClick={handleClose}
             to='/contact'
-            activeClassName='activeStyle'
+            activeClassName='mobileActiveStyle'
           >
             Contact
           </NavLinkStyled>

@@ -5,7 +5,6 @@ import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import SEO from '../components/SEO'
 import { Link } from 'gatsby'
-import { Card } from '@material-ui/core'
 
 const Index = () => {
   const theme = useTheme()
@@ -22,7 +21,7 @@ const Index = () => {
     display: flex;
     flex-direction: column;
     @media screen and (max-width: 768px) {
-      padding: 0 2rem;
+      padding: 5rem 2rem;
       width: 100%;
     }
   `

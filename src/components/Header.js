@@ -22,7 +22,6 @@ const Header = ({ handleThemeToggle }) => {
   `)
 
   const [switched, setSwitched] = useState(true)
-  const [hasAnimated, setHasAnimated] = useState(false)
 
   const handleSwitch = () => {
     setSwitched(!switched)
@@ -33,19 +32,8 @@ const Header = ({ handleThemeToggle }) => {
 
   // STYLING
 
-  const moveInLeft = keyframes`
-    from {
-      opacity: 0;
-      transform: translateX(-10rem);
-    }
-    to {
-      opacity: 1;
-      transform: translate(0);
-    }
-  `
-
   const HeaderStyled = styled.header`
-  z-index: 99;
+    z-index: 99;
     background-color: ${theme.palette.header.background};
     padding: 2rem;
     height: 100vh;
@@ -55,8 +43,6 @@ const Header = ({ handleThemeToggle }) => {
     justify-content: space-between;
     align-items: flex-start;
 
-    animation: ${!hasAnimated ? moveInLeft : 'none'} 0.8s ease-out;
-
     @media (max-width: 768px) {
       flex: none;
       flex-direction: row;
@@ -64,7 +50,6 @@ const Header = ({ handleThemeToggle }) => {
       min-height: 0;
       height: 60px;
       width: 100%;
-      animation: none;
     }
   `
   const NavStyled = styled.nav`
@@ -174,10 +159,6 @@ const Header = ({ handleThemeToggle }) => {
     }
   `
 
-  setTimeout(() => {
-    setHasAnimated(true)
-  }, 1000)
-
   // ~ COMPONENT
   return (
     <HeaderStyled>
@@ -190,7 +171,9 @@ const Header = ({ handleThemeToggle }) => {
         <HeaderTextStyledp>Starcraft Lover</HeaderTextStyledp>
         <SwitchWrapperDivStyled>
           <AntSwitch checked={switched} onChange={handleSwitch} name='switch' />
-          <HeaderTextStyledp>{theme.palette.type === 'dark' ? 'Dark Mode' : 'Light Mode'}</HeaderTextStyledp>
+          <HeaderTextStyledp>
+            {theme.palette.type === 'dark' ? 'Dark Mode' : 'Light Mode'}
+          </HeaderTextStyledp>
         </SwitchWrapperDivStyled>
       </MainLogoStyledDiv>
       <NavStyled>

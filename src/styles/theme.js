@@ -32,6 +32,9 @@ export const darkTheme = createMuiTheme({
     card: {
       chipBackground: '#D3D3D3',
       background: '#1f2128'
+    },
+    switchable: {
+      skillsBackground: '#1f2128'
     }
   },
   overrides: {
@@ -78,6 +81,9 @@ export const lightTheme = createMuiTheme({
     card: {
       chipBackground: '#D3D3D3',
       background: '#FFFFFF'
+    },
+    switchable: {
+      skillsBackground: '#FFFFFF'
     }
   },
 });

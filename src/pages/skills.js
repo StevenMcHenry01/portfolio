@@ -21,7 +21,7 @@ const SkillsPage = () => {
       <SEO title='Skills' />
       <ContainerStyled maxWidth='lg'>
       <Card>
-        <div style={{backgroundColor: theme.palette.card.background, padding: '30px'}}>
+        <div style={{backgroundColor: theme.palette.switchable.skillsBackground ,padding: '30px'}}>
 
         <Skills />
         </div>

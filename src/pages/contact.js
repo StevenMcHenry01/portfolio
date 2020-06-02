@@ -22,10 +22,8 @@ const ContactPage = () => {
   return (
     <>
       <SEO title='contact' />
-
         <ContactPageStyled>
         <Card style={{padding: '3rem'}}>
-
           <ContactForm />
         </Card>
         </ContactPageStyled>
