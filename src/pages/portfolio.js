@@ -12,9 +12,8 @@ const PortfolioPage = () => {
   const theme = useTheme()
   // STYLING
   const PageWrapper = styled.div`
-    height: 100%;
-    width: 100%;
     max-width: 1200px;
+    overflow-y: scroll;
     @media screen and (max-width: 768px) {
       display: flex;
       flex-direction: column;
@@ -30,6 +29,7 @@ const PortfolioPage = () => {
     grid-template-columns: repeat(auto-fit, minmax(350px, max-content));
     row-gap: 20px;
     column-gap: 30px;
+    
   `
 
   const WorkCardStyled = styled(WorkCard)`

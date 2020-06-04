@@ -1,36 +1,32 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Card, Box, Container, useTheme } from '@material-ui/core'
+import { Card, Container, useTheme } from '@material-ui/core'
 import Skills from '../components/Skills'
 import SEO from '../components/SEO'
-import { CenteredDiv } from '../styles/CenteredDiv'
-import Loading from '../components/Loading'
 
 const SkillsPage = () => {
   const theme = useTheme()
 
-  const ContainerStyled = styled(Container)`
-    display: flex;
-    margin-left: 0;
+  const SkillWrapperStyledDiv = styled.div`
+    background-color: ${theme.palette.switchable.skillsBackground};
+    padding: 30px;
+    max-height: 70vh;
+    overflow-y: scroll;
+    @media (max-width: 768px) {
+      max-width: 340px;
+    }
   `
 
   return (
     <React.Fragment>
       <SEO title='Skills' />
-      <ContainerStyled maxWidth='lg'>
+      <Container maxWidth='lg'>
         <Card>
-          <div
-            style={{
-              backgroundColor: theme.palette.switchable.skillsBackground,
-              padding: '30px',
-              maxHeight: '70vh',
-              overflowY: 'scroll'
-            }}
-          >
+          <SkillWrapperStyledDiv>
             <Skills />
-          </div>
+          </SkillWrapperStyledDiv>
         </Card>
-      </ContainerStyled>
+      </Container>
     </React.Fragment>
   )
 }

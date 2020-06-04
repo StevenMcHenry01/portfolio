@@ -72,7 +72,7 @@ export default PageWrapper
 
 // STYLING
 const PageWrapperStyled = styled.div`
-  width: 100%;
+width: 100%;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -81,6 +81,8 @@ const PageWrapperStyled = styled.div`
   left: 272px;
   @media (max-width: 768px) {
     left: 0;
+    position: relative;
+    height: calc(100vh - 60px);
   }
 `
 
@@ -106,5 +108,6 @@ const ChildrenWrapperStyled = styled.div`
   @media (max-width: 768px) {
     display: flex;
     justify-content: center;
+    padding: 5rem 1rem;
   }
 `
