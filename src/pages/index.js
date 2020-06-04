@@ -4,24 +4,35 @@ import { useTheme } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import SEO from '../components/SEO'
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 const Index = () => {
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     mountains: file(relativePath: { eq: "mountains.png" }) {
+  //       childImageSharp {
+  //         fixed(width: 400) {
+  //           ...GatsbyImageSharpFixed
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
   const theme = useTheme()
 
   // STYLING
   const PageWrapper = styled.div`
-    max-width: 1200px;
+  
   `
 
   const GreetingDivStyled = styled.div`
-    padding-left: 5rem;
-    padding-top: 20rem;
+
     width: 80%;
     display: flex;
     flex-direction: column;
     @media screen and (max-width: 768px) {
-      padding: 5rem 2rem;
+
       width: 100%;
     }
   `
@@ -74,7 +85,7 @@ const Index = () => {
   `
 
   return (
-    <>
+    <React.Fragment>
       <SEO title='Home' />
       <PageWrapper>
         <GreetingDivStyled>
@@ -84,7 +95,7 @@ const Index = () => {
             </Typography>
             <GlitchSpanStyled data-text='STEVEN'>STEVEN</GlitchSpanStyled>
           </div>
-          <div style={{ padding: '1rem 0', marginBottom: '15px'}}>
+          <div style={{ padding: '1rem 0', marginBottom: '15px' }}>
             <Typography variant='h6' style={{ fontWeight: '800' }}>
               I build cool things on the web
             </Typography>
@@ -106,7 +117,7 @@ const Index = () => {
           </div>
         </GreetingDivStyled>
       </PageWrapper>
-    </>
+    </React.Fragment>
   )
 }
 

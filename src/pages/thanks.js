@@ -12,12 +12,12 @@ const ThanksPage = () => {
     flex-direction: column;
     justify-content: center;
     height: 100vh;
-    padding: 5rem;
+
     @media screen and (max-width: 768px) {
       text-align: center;
       align-items: center;
       margin-top: -4rem;
-      padding: 2rem;
+
     }
   `
 

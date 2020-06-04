@@ -11,16 +11,11 @@ const ThoughtsPage = () => {
   const ThoughtsPageStyled = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+
     align-items: flex-start;
-    min-height: 100vh;
-    margin-left: 5rem;
-    margin-top: -4rem;
+
     @media (max-width: 768px) {
       align-items: center;
-      margin-left: 0;
-      margin-top: -10rem;
-      padding: 0 2rem;
       text-align: center;
     }
   `

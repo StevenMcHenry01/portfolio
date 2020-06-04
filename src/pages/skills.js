@@ -9,7 +9,6 @@ import Loading from '../components/Loading'
 const SkillsPage = () => {
   const theme = useTheme()
   const StyledPage = styled.div`
-    padding-top: 1rem;
     width: 100%;
     min-height: 100vh;
   `

@@ -8,16 +8,7 @@ import SEO from '../components/SEO'
 const ContactPage = () => {
   // STYLING
   const ContactPageStyled = styled.div`
-    padding-left: 5rem;
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
-    @media (max-width: 768px) {
-      padding: 0;
-      flex-direction: column;
-      justify-content: center;
-      margin-top: -10rem;
-    }
+    max-width: 360px;
   `
   return (
     <>

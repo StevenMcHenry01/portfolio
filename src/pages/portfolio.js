@@ -14,14 +14,12 @@ const PortfolioPage = () => {
   const PageWrapper = styled.div`
     height: 100%;
     width: 100%;
-    padding: 10rem 0 0 5rem;
     max-width: 1200px;
     @media screen and (max-width: 768px) {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 5rem 0;
       text-align: center;
     }
   `

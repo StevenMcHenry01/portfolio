@@ -5,7 +5,6 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import { ThemeProvider } from '@material-ui/core/styles'
 import { lightTheme, darkTheme } from '../../src/styles/theme'
 import styled from 'styled-components'
-import GithubCorner from 'react-github-corner'
 import '../../src/styles/standardInject.scss'
 
 import PageWrapper from '../../src/components/PageWrapper'
@@ -40,6 +39,7 @@ const TopLayout = ({ children }) => {
         <CssBaseline />
         <AppWrapper>
           <Header handleThemeToggle={handleThemeToggle} />
+
           <PageWrapper
             vantaEffect={vantaEffect}
             setVantaEffect={setVantaEffect}
@@ -48,10 +48,6 @@ const TopLayout = ({ children }) => {
             {children}
           </PageWrapper>
         </AppWrapper>
-        <GithubCornerStyled
-          href='https://github.com/stevenmchenry01'
-          target='_blank'
-        />
       </ThemeProvider>
     </>
   )
@@ -62,13 +58,6 @@ TopLayout.propTypes = {
 }
 
 // STYLING
-
-const GithubCornerStyled = styled(GithubCorner)`
-  @media (max-width: 768px) {
-    display: none;
-  }
-`
-
 const AppWrapper = styled.div`
   min-height: 100vh;
   display: flex;
