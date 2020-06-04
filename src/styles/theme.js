@@ -27,7 +27,7 @@ export const darkTheme = createMuiTheme({
       main: red.A400,
     },
     background: {
-      default: '#696969'
+      default: '#454545'
     },
     card: {
       chipBackground: '#D3D3D3',
@@ -78,7 +78,7 @@ export const lightTheme = createMuiTheme({
       main: red.A400,
     },
     background: {
-      default: '#f5f5f5',
+      default: '#dedede',
     },
     card: {
       chipBackground: '#D3D3D3',

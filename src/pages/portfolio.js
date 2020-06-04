@@ -19,6 +19,8 @@ const PortfolioPage = () => {
       justify-content: center;
       align-items: center;
       text-align: center;
+      height: 100%;
+      overflow-y: scroll;
     }
   `
 
@@ -28,7 +30,6 @@ const PortfolioPage = () => {
     grid-template-columns: repeat(auto-fit, minmax(350px, max-content));
     row-gap: 20px;
     column-gap: 30px;
-    
   `
 
   const WorkCardStyled = styled(WorkCard)`

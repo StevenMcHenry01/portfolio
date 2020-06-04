@@ -20,6 +20,7 @@ export default function ContactForm() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const [textAreaFocused, setTextAreaFocused] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -108,7 +109,13 @@ export default function ContactForm() {
         onChange={(e) => setEmail(e.target.value)}
       />
       <TextareaAutosize
-        placeholder='message'
+        placeholder={textAreaFocused ? '' : 'message'}
+        onFocus={()=>setTextAreaFocused(true)}
+        onFocusOut={()=>{
+          if(message === '') {
+            setTextAreaFocused(false)
+          }
+        }}
         id='message'
         label='message'
         name='message'
