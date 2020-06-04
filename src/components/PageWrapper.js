@@ -79,7 +79,6 @@ const PageWrapperStyled = styled.div`
   right: 0;
   bottom: 0;
   left: 272px;
-  overflow: hidden;
   @media (max-width: 768px) {
     left: 0;
   }

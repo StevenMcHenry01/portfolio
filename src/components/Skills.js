@@ -77,7 +77,7 @@ const SkillsTree = () => {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: ${theme.palette.card.background};
+    background: ${theme.palette.switchable.skillsBackground};
     overflow: hidden;
     font-size: 20px;
     line-height: 28px;

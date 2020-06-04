@@ -34,7 +34,7 @@ export const darkTheme = createMuiTheme({
       background: '#1f2128'
     },
     switchable: {
-      skillsBackground: '#1f2128',
+      skillsBackground: '#696969',
       textAreaPlaceholder: grey[300],
       textArea: '#FFFFFF'
     }

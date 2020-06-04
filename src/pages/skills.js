@@ -8,17 +8,14 @@ import Loading from '../components/Loading'
 
 const SkillsPage = () => {
   const theme = useTheme()
-  const StyledPage = styled.div`
-    width: 100%;
-    min-height: 100vh;
-  `
+
   const ContainerStyled = styled(Container)`
     display: flex;
     margin-left: 0;
   `
 
   return (
-    <StyledPage>
+    <React.Fragment>
       <SEO title='Skills' />
       <ContainerStyled maxWidth='lg'>
         <Card>
@@ -26,13 +23,15 @@ const SkillsPage = () => {
             style={{
               backgroundColor: theme.palette.switchable.skillsBackground,
               padding: '30px',
+              maxHeight: '70vh',
+              overflowY: 'scroll'
             }}
           >
             <Skills />
           </div>
         </Card>
       </ContainerStyled>
-    </StyledPage>
+    </React.Fragment>
   )
 }
 
