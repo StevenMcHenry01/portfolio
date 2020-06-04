@@ -28,6 +28,13 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        start_url: `/`,
+        icon: `src/images/logo.png`
+      },
+    },
   ],
   siteMetadata: {
     title: `Steven McHenry`,
