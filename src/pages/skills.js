@@ -7,10 +7,11 @@ import SEO from '../components/SEO'
 const SkillsPage = () => {
   const theme = useTheme()
 
-  const SkillWrapperStyledDiv = styled.div`
+  const SkillWrapperStyledDiv = styled(Card)`
     background-color: ${theme.palette.switchable.skillsBackground};
-    padding: 30px;
+    padding: 20px;
     max-height: 70vh;
+    max-width: 370px;
     overflow-y: scroll;
     @media (max-width: 768px) {
       max-width: 340px;
@@ -20,13 +21,12 @@ const SkillsPage = () => {
   return (
     <React.Fragment>
       <SEO title='Skills' />
-      <Container maxWidth='lg'>
-        <Card>
-          <SkillWrapperStyledDiv>
-            <Skills />
-          </SkillWrapperStyledDiv>
-        </Card>
-      </Container>
+
+
+        <SkillWrapperStyledDiv>
+          <Skills />
+        </SkillWrapperStyledDiv>
+
     </React.Fragment>
   )
 }

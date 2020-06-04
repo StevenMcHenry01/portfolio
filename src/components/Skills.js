@@ -78,7 +78,7 @@ const SkillsTree = () => {
     margin: 0;
     padding: 0;
     background: ${theme.palette.switchable.skillsBackground};
-    overflow: hidden;
+    overflow: visible;
     font-size: 20px;
     line-height: 28px;
     div,
@@ -183,7 +183,7 @@ const Frame = styled('div')`
   padding: 8px 0px 0px 8px;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow-x: hidden;
+
   vertical-align: middle;
   color: white;
   fill: white;
