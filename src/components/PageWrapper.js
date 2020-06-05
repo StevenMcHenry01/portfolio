@@ -103,7 +103,7 @@ const StyledImg = styled(motion.img)`
 `
 
 const ChildrenWrapperStyled = styled.div`
-  padding: 10rem 5rem;
+  padding: 10rem calc(5rem + 272px) 10rem 5rem;
   z-index: 2;
   @media (max-width: 768px) {
     display: flex;
