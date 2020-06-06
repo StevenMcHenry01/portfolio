@@ -7,6 +7,7 @@ import { workArray } from '../data/workArray'
 
 // My imports
 import WorkCard from '../components/WorkCard'
+import SEO from '../components/SEO'
 
 const PortfolioPage = () => {
   const theme = useTheme()
@@ -47,6 +48,7 @@ const PortfolioPage = () => {
 
   return (
     <PageWrapper>
+      <SEO title="Portfolio"/>
       <Typography variant='h3'>Selected Work</Typography>
       <Typography gutterBottom variant='h6' style={{margin: '1rem 0'}}>
         The rest of my work can be found at my{' '}

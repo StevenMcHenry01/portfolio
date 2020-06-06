@@ -47,7 +47,7 @@ const ThanksPage = () => {
   `
   return (
     <>
-      <SEO title='Skills' />
+      <SEO title='Thanks' />
       <ThanksPageStyled>
         <Wrapper>
           <Typography variant='h4'>Thank you for your submission!</Typography>

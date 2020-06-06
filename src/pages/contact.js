@@ -12,7 +12,7 @@ const ContactPage = () => {
   `
   return (
     <>
-      <SEO title='contact' />
+      <SEO title='Contact' />
         <ContactPageStyled>
         <Card style={{padding: '3rem'}}>
           <ContactForm />

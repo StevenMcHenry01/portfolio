@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import ThoughtBubble from '../components/Icons/ThoughtBubble'
 
 // My imports
+import SEO from '../components/SEO'
 
 const ThoughtsPage = () => {
   const theme = useTheme()
@@ -25,6 +26,7 @@ const ThoughtsPage = () => {
   `
   return (
     <ThoughtsPageStyled>
+      <SEO title='Thoughts' />
       <Wrapper>
         <ThoughtBubble />
       </Wrapper>
