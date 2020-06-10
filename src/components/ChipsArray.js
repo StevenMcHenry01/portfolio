@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     flexWrap: 'wrap',
+    marginTop: '5px',
     padding: theme.spacing(0.5),
     backgroundColor: theme.palette.card.chipBackground
   },
@@ -17,13 +18,6 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default function ChipsArray({ chipArray }) {
-  // [
-  //   { key: 0, label: 'Angular', icon: TagFacesIcon },
-  //   { key: 1, label: 'jQuery' },
-  //   { key: 2, label: 'Polymer' },
-  //   { key: 3, label: 'React' },
-  //   { key: 4, label: 'Vue.js' },
-  // ]
   const classes = useStyles()
 
   return (

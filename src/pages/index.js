@@ -4,35 +4,17 @@ import { useTheme } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import SEO from '../components/SEO'
-import { Link, useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { Link } from 'gatsby'
 
 const Index = () => {
-  // const data = useStaticQuery(graphql`
-  //   query {
-  //     mountains: file(relativePath: { eq: "mountains.png" }) {
-  //       childImageSharp {
-  //         fixed(width: 400) {
-  //           ...GatsbyImageSharpFixed
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
   const theme = useTheme()
 
   // STYLING
-  const PageWrapper = styled.div`
-  
-  `
-
   const GreetingDivStyled = styled.div`
-
     width: 80%;
     display: flex;
     flex-direction: column;
     @media screen and (max-width: 768px) {
-
       width: 100%;
     }
   `
@@ -87,36 +69,34 @@ const Index = () => {
   return (
     <React.Fragment>
       <SEO title='Home' />
-      <PageWrapper>
-        <GreetingDivStyled>
-          <div>
-            <Typography display='inline' variant='h2' color='primary'>
-              Hi I'm{' '}
-            </Typography>
-            <GlitchSpanStyled data-text='STEVEN'>STEVEN</GlitchSpanStyled>
-          </div>
-          <div style={{ padding: '1rem 0', marginBottom: '15px' }}>
-            <Typography variant='h6' style={{ fontWeight: '800' }}>
-              I build cool things on the web
-            </Typography>
-            <Typography variant='h6' style={{ fontWeight: '800' }}>
-              and am always striving to be a better developer
-            </Typography>
-          </div>
-          <div>
-            <Link to='/portfolio' style={{ textDecoration: 'none' }}>
-              <StyledButton variant='contained' color='secondary'>
-                Work
-              </StyledButton>
-            </Link>
-            <Link to='/contact' style={{ textDecoration: 'none' }}>
-              <StyledButton variant='contained' color='secondary'>
-                Contact
-              </StyledButton>
-            </Link>
-          </div>
-        </GreetingDivStyled>
-      </PageWrapper>
+      <GreetingDivStyled>
+        <div>
+          <Typography display='inline' variant='h2' color='primary'>
+            Hi I'm{' '}
+          </Typography>
+          <GlitchSpanStyled data-text='STEVEN'>STEVEN</GlitchSpanStyled>
+        </div>
+        <div style={{ padding: '1rem 0', marginBottom: '15px' }}>
+          <Typography variant='h6' style={{ fontWeight: '800' }}>
+            I build cool things on the web
+          </Typography>
+          <Typography variant='h6' style={{ fontWeight: '800' }}>
+            and am always striving to be a better developer
+          </Typography>
+        </div>
+        <div>
+          <Link to='/portfolio' style={{ textDecoration: 'none' }}>
+            <StyledButton variant='contained' color='secondary'>
+              Work
+            </StyledButton>
+          </Link>
+          <Link to='/contact' style={{ textDecoration: 'none' }}>
+            <StyledButton variant='contained' color='secondary'>
+              Contact
+            </StyledButton>
+          </Link>
+        </div>
+      </GreetingDivStyled>
     </React.Fragment>
   )
 }

@@ -28,11 +28,13 @@
     "react-github-corner": "^2.3.0",
     "react-helmet": "latest",
     "react-icons": "^3.9.0",
+    "react-id-swiper": "^3.0.0",
     "react-lottie": "^1.2.3",
     "react-spring": "^8.0.27",
     "resize-observer-polyfill": "^1.5.1",
     "styled-components": "^4.4.1",
     "styled-theming": "^2.2.0",
+    "swiper": "^5.4.2",
     "three": "^0.116.1",
     "vanta": "^0.5.15"
   },

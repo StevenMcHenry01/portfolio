@@ -34,6 +34,10 @@ const TopLayout = ({ children }) => {
           href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap'
           rel='stylesheet'
         />
+        <link
+          rel='stylesheet'
+          href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css'
+        />
       </Helmet>
       <ThemeProvider theme={darkThemeActivated ? darkTheme : lightTheme}>
         <CssBaseline />
