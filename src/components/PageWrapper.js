@@ -3,6 +3,8 @@ import React, { useRef, useEffect } from 'react'
 import * as THREE from 'three'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 // My imports
 import WAVES from '../data/vanta.waves.min'
@@ -13,6 +15,17 @@ const PageWrapper = ({
   darkThemeActivated,
   children,
 }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      mountains: file(relativePath: { eq: "mountains.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
   const myRef = useRef(null)
 
   useEffect(() => {
@@ -63,7 +76,7 @@ const PageWrapper = ({
     <PageWrapperStyled ref={myRef}>
       <ChildrenWrapperStyled>{children}</ChildrenWrapperStyled>
 
-      <StyledImg animate={{bottom: 0}} transition={{duration: 1.5}} src='assets/mountains.png' />
+      <StyledImg fluid={data.mountains.childImageSharp.fluid} />
     </PageWrapperStyled>
   )
 }
@@ -72,12 +85,12 @@ export default PageWrapper
 
 // STYLING
 const PageWrapperStyled = styled.div`
-width: 100%;
+  width: 100%;
   height: 100vh;
   position: fixed;
   top: 0;
   right: 0;
-  bottom: 0;
+  bottom: -50px;
   left: 272px;
   @media (max-width: 768px) {
     left: 0;
@@ -86,16 +99,16 @@ width: 100%;
   }
 `
 
-const StyledImg = styled(motion.img)`
-  height: 500px;
-  position: absolute;
-  bottom: -700px;
-  right: 300px;
+const StyledImg = styled(Img)`
+  position: absolute !important;
+  bottom: 0px;
+  right: 290px;
+  width: 1000px;
   @media (max-width: 1600px) {
-    height: 350px;
+    width: 700px;
   }
-  @media (max-width: 950px) {
-    height: 200px;
+  @media (max-width: 850px) {
+    width: 500px;
   }
   @media (max-width: 768px) {
     display: none;

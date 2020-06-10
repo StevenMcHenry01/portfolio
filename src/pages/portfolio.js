@@ -39,7 +39,7 @@ const PageWrapper = styled.div`
   max-width: 1200px;
   margin-top: -100px;
   @media screen and (max-width: 768px) {
-    margin-top: 0;
+    margin-top: -50px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -52,8 +52,6 @@ const SlideShowWrapper = styled.div`
   width: 100%;
   @media screen and (max-width: 768px) {
     width: 100vw;
-  }
-  @media screen and (max-width: 768px) {
-    width: 100vw;
+    height: 100%;
   }
 `
