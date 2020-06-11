@@ -15,6 +15,7 @@ const SkillsPage = () => {
     overflow-y: scroll;
     @media (max-width: 768px) {
       max-width: 340px;
+      margin-top: 3rem;
     }
   `
 

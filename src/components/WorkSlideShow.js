@@ -1,7 +1,6 @@
 // 3rd party imports
 import React from 'react'
 import Swiper from 'react-id-swiper'
-import styled from 'styled-components'
 
 // My imports
 import { workArray } from '../data/workArray'

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { navigate } from 'gatsby-link'
-import styled from 'styled-components'
 import {
   TextField,
   Button,

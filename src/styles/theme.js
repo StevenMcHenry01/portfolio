@@ -36,7 +36,8 @@ export const darkTheme = createMuiTheme({
     switchable: {
       skillsBackground: '#696969',
       textAreaPlaceholder: grey[300],
-      textArea: '#FFFFFF'
+      textArea: '#FFFFFF',
+      glitchText: '#FFFFFF'
     }
   },
   overrides: {
@@ -87,7 +88,8 @@ export const lightTheme = createMuiTheme({
     switchable: {
       skillsBackground: '#FFFFFF',
       textAreaPlaceholder: grey[600],
-      textArea: '#1c181d'
+      textArea: '#1c181d',
+      glitchText: '#1c181d'
     }
   },
 });

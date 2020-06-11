@@ -2,7 +2,6 @@
 import React, { useRef, useEffect } from 'react'
 import * as THREE from 'three'
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
@@ -121,6 +120,6 @@ const ChildrenWrapperStyled = styled.div`
   @media (max-width: 768px) {
     display: flex;
     justify-content: center;
-    padding: 5rem 1rem;
+    padding: 0;
   }
 `

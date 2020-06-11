@@ -39,7 +39,7 @@ const PageWrapper = styled.div`
   max-width: 1200px;
   margin-top: -100px;
   @media screen and (max-width: 768px) {
-    margin-top: -50px;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

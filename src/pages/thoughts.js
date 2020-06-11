@@ -1,6 +1,6 @@
 // 3rd party imports
 import React from 'react'
-import { Typography, Container, useTheme } from '@material-ui/core'
+import { Typography } from '@material-ui/core'
 import styled from 'styled-components'
 import ThoughtBubble from '../components/Icons/ThoughtBubble'
 
@@ -8,22 +8,6 @@ import ThoughtBubble from '../components/Icons/ThoughtBubble'
 import SEO from '../components/SEO'
 
 const ThoughtsPage = () => {
-  const theme = useTheme()
-  const ThoughtsPageStyled = styled.div`
-    display: flex;
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    @media (max-width: 768px) {
-      align-items: center;
-      text-align: center;
-    }
-  `
-
-  const Wrapper = styled.div`
-    margin: 0;
-  `
   return (
     <ThoughtsPageStyled>
       <SEO title='Thoughts' />
@@ -43,3 +27,18 @@ const ThoughtsPage = () => {
 export default ThoughtsPage
 
 // STYLING
+const ThoughtsPageStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  @media (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+  }
+`
+
+const Wrapper = styled.div`
+  margin: 0;
+`

@@ -16,14 +16,13 @@ const Index = () => {
     flex-direction: column;
     @media screen and (max-width: 768px) {
       width: 100%;
+      padding: 3rem 3rem 0 3rem;
     }
   `
 
   const GlitchSpanStyled = styled.span`
     display: inline-block;
-    color: ${theme.palette.type === 'light'
-      ? theme.palette.common.black
-      : theme.palette.common.white};
+    color: ${theme.palette.switchable.gitchText};
     font-size: 55px;
     position: relative;
     width: 200px;
@@ -38,9 +37,7 @@ const Index = () => {
       left: 2px;
       text-shadow: -1px 0 ${theme.palette.primary.main};
       top: 0;
-      color: ${theme.palette.type === 'light'
-        ? theme.palette.common.black
-        : theme.palette.common.white};
+      color: ${theme.palette.switchable.gitchText};
       background: transparent;
       overflow: hidden;
       clip: rect(0, 900px, 0, 0);
@@ -52,9 +49,7 @@ const Index = () => {
       left: -2px;
       text-shadow: 1px 0 ${theme.palette.secondary.main};
       top: 0;
-      color: ${theme.palette.type === 'light'
-        ? theme.palette.common.black
-        : theme.palette.common.white};
+      color: ${theme.palette.switchable.gitchText};
       background: transparent;
       overflow: hidden;
       clip: rect(0, 900px, 0, 0);
