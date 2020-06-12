@@ -4,6 +4,7 @@ import * as THREE from 'three'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import { isMobile } from 'react-device-detect'
 
 // My imports
 import WAVES from '../data/vanta.waves.min'
@@ -72,7 +73,12 @@ const PageWrapper = ({
   }, [vantaEffect])
 
   return (
-    <PageWrapperStyled ref={myRef}>
+    <PageWrapperStyled
+      ref={myRef}
+      style={{
+        height: isMobile && window.innerWidth < 800 ? window.innerHeight - 60 : '100vh',
+      }}
+    >
       <ChildrenWrapperStyled>{children}</ChildrenWrapperStyled>
 
       <StyledImg fluid={data.mountains.childImageSharp.fluid} />
@@ -85,7 +91,7 @@ export default PageWrapper
 // STYLING
 const PageWrapperStyled = styled.div`
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   position: fixed;
   top: 0;
   right: 0;
@@ -95,7 +101,7 @@ const PageWrapperStyled = styled.div`
     left: 0;
     bottom: 0;
     position: relative;
-    height: calc(-webkit-fill-available - 60px);
+    /* height: -webkit-fill-calc(100vh - 60px); */
   }
 `
 

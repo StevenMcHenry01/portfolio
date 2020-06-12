@@ -24,6 +24,7 @@
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
     "react": "latest",
+    "react-device-detect": "^1.12.1",
     "react-dom": "latest",
     "react-github-corner": "^2.3.0",
     "react-helmet": "latest",
