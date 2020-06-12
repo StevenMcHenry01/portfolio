@@ -76,7 +76,7 @@ const PageWrapper = ({
     <PageWrapperStyled
       ref={myRef}
       style={{
-        height: isMobileOnly ? (window.innerHeight - 60) : '100vh',
+        height: isMobileOnly ? `${(window.innerHeight - 60)}px` : '100vh',
       }}
     >
       <ChildrenWrapperStyled>{children}</ChildrenWrapperStyled>
