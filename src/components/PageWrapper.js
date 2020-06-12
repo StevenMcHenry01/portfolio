@@ -93,8 +93,9 @@ const PageWrapperStyled = styled.div`
   left: 272px;
   @media (max-width: 768px) {
     left: 0;
+    bottom: 0;
     position: relative;
-    height: calc(100vh - 60px);
+    height: calc(-webkit-fill-available - 60px);
   }
 `
 
