@@ -1,7 +1,7 @@
 // 3rd party imports
 import React from 'react'
 import styled from 'styled-components'
-import { Typography, useTheme, Divider, Button, Link } from '@material-ui/core'
+import { Typography, Divider, Button, Link } from '@material-ui/core'
 import GitHubIcon from '@material-ui/icons/GitHub'
 
 // My imports

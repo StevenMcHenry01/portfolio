@@ -9,7 +9,6 @@ import { Typography, Link, Button } from '@material-ui/core'
 import ChipsArray from './ChipsArray'
 
 const Slide = ({ work }) => {
-  console.log(work)
   const { title, description, imageName, githubUrl, siteUrl, chipArray } = work
 
   const data = useStaticQuery(graphql`
@@ -47,7 +46,7 @@ const Slide = ({ work }) => {
         >
           {title}
         </Typography>
-        <Typography variant='p'>{description}</Typography>
+        <Typography variant='body1'>{description}</Typography>
         <ButtonGroup style={{ margin: '1rem 0' }}>
           <Link href={githubUrl} target='_blank' rel='noopener noreferrer'>
             <FirstButtonStyled variant='contained' color='secondary'>

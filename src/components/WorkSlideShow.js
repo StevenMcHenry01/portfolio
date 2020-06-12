@@ -16,8 +16,8 @@ const WorkSlideShow = () => {
 
   return (
     <Swiper {...params}>
-      {workArray.map((work) => (
-        <div>
+      {workArray.map((work, index) => (
+        <div key={index}>
           <Slide work={work} />
         </div>
       ))}
