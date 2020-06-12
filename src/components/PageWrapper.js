@@ -4,7 +4,7 @@ import * as THREE from 'three'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { isMobile, isTablet } from 'react-device-detect'
+import { isMobileOnly } from 'react-device-detect'
 
 // My imports
 import WAVES from '../data/vanta.waves.min'
@@ -76,7 +76,7 @@ const PageWrapper = ({
     <PageWrapperStyled
       ref={myRef}
       style={{
-        height: isMobile && !isTablet ? window.innerHeight - 60 : '100vh',
+        height: isMobileOnly ? window.innerHeight - 60 : '100vh',
       }}
     >
       <ChildrenWrapperStyled>{children}</ChildrenWrapperStyled>

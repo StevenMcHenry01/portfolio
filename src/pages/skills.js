@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Card, Container, useTheme } from '@material-ui/core'
+import { Card, useTheme } from '@material-ui/core'
 import Skills from '../components/Skills'
 import SEO from '../components/SEO'
 
