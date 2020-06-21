@@ -27,7 +27,7 @@ const Slide = ({ work }) => {
           }
         }
       }
-      starcraft: file(relativePath: { eq: "work/starcraft.png" }) {
+      reddit: file(relativePath: { eq: "work/reddit.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
