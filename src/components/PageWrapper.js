@@ -78,9 +78,9 @@ const PageWrapper = ({
       style={{
         height:
           isMobileOnly && isIOS
-            ? `calc(100vh - 100)`
+            ? `calc(100vh - 100px)`
             : isMobileOnly
-            ? `calc(100vh - 60)`
+            ? `calc(100vh - 60px)`
             : '100vh',
       }}
     >
