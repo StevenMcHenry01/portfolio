@@ -12,11 +12,12 @@ const PortfolioPage = () => {
   return (
     <PageWrapper>
       <SEO title='Portfolio' />
-      <Typography variant='h3'>Selected Work</Typography>
-      <Typography gutterBottom variant='h6' style={{ margin: '1rem 0' }}>
+      <Title variant='h3'>Selected Work</Title>
+      <Header gutterBottom variant='h6'>
         The rest of my work can be found at my{' '}
         <Link
           href='https://github.com/StevenMcHenry01'
+          style={{textDecoration: 'none'}}
           target='_blank'
           rel='noopener noreferrer'
         >
@@ -24,7 +25,7 @@ const PortfolioPage = () => {
             github account
           </Button>
         </Link>
-      </Typography>
+      </Header>
       <Divider style={{ width: '19.5rem' }} />
       <SlideShowWrapper>
         <WorkSlideShow />
@@ -53,5 +54,19 @@ const SlideShowWrapper = styled.div`
   @media screen and (max-width: 768px) {
     width: 100vw;
     height: 100%;
+  }
+`
+
+const Title = styled(Typography)`
+  @media screen and (max-width: 768px) {
+    margin-top: 10px;
+    font-size: 2.5rem;
+  }
+`
+
+const Header = styled(Typography)`
+  margin: 1rem 0;
+  @media screen and (max-width: 768px) {
+    margin: .2rem 0 .5rem 0;
   }
 `

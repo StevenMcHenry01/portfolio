@@ -73,17 +73,7 @@ const PageWrapper = ({
   }, [vantaEffect])
 
   return (
-    <PageWrapperStyled
-      ref={myRef}
-      style={{
-        height:
-          isMobileOnly && isIOS
-            ? `calc(100vh - 100px)`
-            : isMobileOnly
-            ? `calc(100vh - 60px)`
-            : '100vh',
-      }}
-    >
+    <PageWrapperStyled ref={myRef}>
       <ChildrenWrapperStyled>{children}</ChildrenWrapperStyled>
 
       <StyledImg fluid={data.mountains.childImageSharp.fluid} />
@@ -96,7 +86,7 @@ export default PageWrapper
 // STYLING
 const PageWrapperStyled = styled.div`
   width: 100%;
-  /* height: 100vh; */
+  height: 100vh;
   position: fixed;
   top: 0;
   right: 0;
@@ -106,7 +96,7 @@ const PageWrapperStyled = styled.div`
     left: 0;
     bottom: 0;
     position: relative;
-    /* height: -webkit-fill-calc(100vh - 60px); */
+    height: -webkit-calc(100vh - 60px);
   }
 `
 

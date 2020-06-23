@@ -40,20 +40,25 @@ const Slide = ({ work }) => {
   return (
     <WorkSlideStyled>
       <TextAreaStyled>
-        <Typography
-          variant='h4'
-          style={{ textDecoration: 'underline', marginBottom: '10px' }}
-        >
-          {title}
-        </Typography>
+        <Header variant='h4'>{title}</Header>
         <Typography variant='body1'>{description}</Typography>
         <ButtonGroup style={{ margin: '1rem 0' }}>
-          <Link href={githubUrl} target='_blank' rel='noopener noreferrer'>
+          <Link
+            style={{ textDecoration: 'none' }}
+            href={githubUrl}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <FirstButtonStyled variant='contained' color='secondary'>
               View On Github
             </FirstButtonStyled>
           </Link>
-          <Link href={siteUrl} target='_blank' rel='noopener noreferrer'>
+          <Link
+            style={{ textDecoration: 'none' }}
+            href={siteUrl}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <SecondButtonStyled variant='contained' color='secondary'>
               Visit Site
             </SecondButtonStyled>
@@ -85,9 +90,17 @@ const WorkSlideStyled = styled.div`
     align-items: center;
   }
   @media screen and (max-width: 768px) {
-    margin: 1rem 0;
+    margin: 0.5rem 0 0 0;
     flex-direction: column;
     align-items: center;
+  }
+`
+
+const Header = styled(Typography)`
+  text-decoration: underline;
+  margin-bottom: 10px;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 5px;
   }
 `
 
@@ -114,7 +127,7 @@ const ImageAreaStyled = styled.div`
     width: 100%;
   }
   @media screen and (max-width: 768px) {
-    width: 80vw;
+    width: 70vw;
   }
 `
 

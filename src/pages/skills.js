@@ -23,11 +23,9 @@ const SkillsPage = () => {
     <React.Fragment>
       <SEO title='Skills' />
 
-
-        <SkillWrapperStyledDiv>
-          <Skills />
-        </SkillWrapperStyledDiv>
-
+      <SkillWrapperStyledDiv>
+        <Skills />
+      </SkillWrapperStyledDiv>
     </React.Fragment>
   )
 }

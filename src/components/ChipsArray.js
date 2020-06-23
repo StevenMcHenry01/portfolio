@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     flexWrap: 'wrap',
     marginTop: '5px',
-    padding: theme.spacing(0.5),
+    padding: theme.spacing(0.3),
     backgroundColor: theme.palette.card.chipBackground
   },
   chip: {
