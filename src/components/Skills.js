@@ -160,12 +160,28 @@ const SkillsTree = () => {
           <Tree name='SSH' />
           <Tree name='HTTPS Certification' />
           <Tree name='Terminal Proficiency' />
+          <Tree name='AWS'>
+            <Tree name='S3' />
+            <Tree name='EC2' />
+            <Tree name='RDS' />
+            <Tree name='Route 53' />
+            <Tree name='IAM' />
+          </Tree>
         </Tree>
         <Tree name='OOP'>
           <Tree name='Java'>
             <Tree name='REST API' />
+            <Tree name='Web servers' />
           </Tree>
-          <Tree name='C++'></Tree>
+          <Tree name='C++'>
+            <Tree name='Threading' />
+            <Tree name='Pointers' />
+            <Tree name='Memory Management' />
+          </Tree>
+          <Tree name='Python'>
+            <Tree name='Networking' />
+            <Tree name='Sockets' />
+          </Tree>
         </Tree>
       </Tree>
     </PageStyle>

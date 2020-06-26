@@ -8,12 +8,13 @@ import {
   FaUserShield,
   FaFileCode,
   FaUserSecret,
+  FaAws,
 } from 'react-icons/fa'
 
 export const workArray = [
   {
     title: `Reddit Royale`,
-    description: `A full-stack react application which implements a custom oauth flow and interacts with the reddit API to offer a seamless user experience.`,
+    description: `A full-stack react application which implements a custom oauth flow and interacts with the reddit API to offer a seamless user experience. Backend deployed on AWS and lives on an EC2 server that I manage.`,
     imageName: 'reddit',
     githubUrl: 'https://github.com/StevenMcHenry01/Reddit_Royale_Client',
     siteUrl: 'https://reddit-royale.netlify.app',
@@ -24,6 +25,7 @@ export const workArray = [
       { key: 3, label: 'Oauth', icon: <FaUserShield /> },
       { key: 4, label: 'JWT', icon: <FaUserSecret /> },
       { key: 5, label: 'Material UI', icon: <FaFileCode /> },
+      { key: 6, label: 'AWS', icon: <FaAws /> },
     ],
   },
   {
