@@ -25,7 +25,7 @@ const TopLayout = ({ children }) => {
 
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <meta
           name='viewport'
           content='minimum-scale=1, initial-scale=1, width=device-width'
@@ -52,7 +52,8 @@ const TopLayout = ({ children }) => {
             {children}
           </PageWrapper>
         </AppWrapper>
-      </ThemeProvider>
+      </ThemeProvider> */}
+      {children}
     </>
   )
 }
