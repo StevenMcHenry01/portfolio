@@ -1,13 +1,12 @@
 import React from 'react'
-import styled from 'styled-components'
-import { useTheme } from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography'
-import Button from '@material-ui/core/Button'
-import SEO from '../components/SEO'
-import { Link } from 'gatsby'
+// import styled from 'styled-components'
+// import { useTheme } from '@material-ui/core/styles'
+// import Typography from '@material-ui/core/Typography'
+// import Button from '@material-ui/core/Button'
+// import SEO from '../components/SEO'
+// import { Link } from 'gatsby'
 
 const Index = () => {
-  const theme = useTheme()
 
   // STYLING
   // const GreetingDivStyled = styled.div`
